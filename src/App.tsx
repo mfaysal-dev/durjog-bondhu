@@ -163,7 +163,7 @@ function Home({ L, N, score, onSos, go }: LP & { score: number; onSos: () => voi
 
       <section>
         <h2 className="mb-2 font-bold text-slate-700">{L(ui.hotlines)}</h2>
-        <div className="grid gap-2 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {hotlines.map((h) => (
             <a key={h.num} href={`tel:${h.num}`} className="flex items-center gap-3 rounded-2xl bg-white p-3 shadow-sm ring-1 ring-slate-100 active:bg-teal-50">
               <span className="flex h-12 min-w-14 items-center justify-center rounded-xl bg-teal-700 px-2 text-lg font-bold text-white">{N(h.num)}</span>
@@ -402,7 +402,7 @@ function Prepare({ L, N, kit, setKit, plan, setPlan, score }: LP & { kit: string
 
       <section>
         <h2 className="mb-2 flex items-center gap-2 text-lg font-bold"><Backpack size={20} className="text-teal-700" /> {L({ bn: 'জরুরি কিট চেকলিস্ট', en: 'Emergency kit checklist' })}</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {(Object.keys(cats) as (keyof typeof cats)[]).map((c) => (
             <div key={c} className="rounded-2xl bg-white p-3 shadow-sm ring-1 ring-slate-100">
               <p className="mb-1 px-1 text-xs font-bold uppercase tracking-wider text-slate-500">{L(cats[c])}</p>
